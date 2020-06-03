@@ -2,7 +2,7 @@
 # chwap
 Swap and change RGB channels on image. Also, you can invert them with this tool.
 ## Installation
-This tool is designed to work with Python 3, so it have to be installed. Also, you need python3-pip to install requirements. First, clone this repository and `cd` to it: `git clone https://github.com/gangural/chwap; cd chwap`. Then install the requirements (run as superuser): `pip3 install -r requirements.txt`. That's all!
+This tool is designed to work with Python 3, so it has to be installed. Also, you need python3-pip to install requirements. First, clone this repository and `cd` to it: `git clone https://github.com/gangural/chwap; cd chwap`. Then install the requirements (run as superuser): `pip3 install -r requirements.txt`. That's all!
 ## Usage
 To get list of options, use `-h` flag:
 
@@ -28,7 +28,9 @@ First symbol is responsible for red channel, second is green, third is blue.
 
 **Examples of `--mode` option:**
 `grb` - swipe red and green channels;
+
 `rbG` - swipe blue and green channels, than invert green channel;
+
 `fR0` - fill red channel, invert red and make it green, clear blue channel.
 
 ## Examples:
@@ -42,10 +44,10 @@ Output image:
 
 ![Output image](https://i.imgur.com/S6NfuD1.png)
 
-By the way, you can choose any file extension for output image, such as `.bmp`, `.gif`, `.png` and others. See [Pillow docs about supported image formats](https://pillow.readthedocs.io/en/5.1.x/handbook/image-file-formats.html#fully-supported-formats) for more information.
+You can choose any file extension for output image, such as `.bmp`, `.gif`, `.png` and others. See [Pillow docs about supported image formats](https://pillow.readthedocs.io/en/5.1.x/handbook/image-file-formats.html#fully-supported-formats) for more information.
 ## How it works
 Let's consider an example above, with `rbG` mode. This schema is a good explanation:
 ![explanation](https://i.imgur.com/TE9k5uU.png)
 
-## Why
+## Objective
 I created this simple tool for fun and experimenting. Sometimes result is really amazing 😃. See `gallery` folder to view best results.
