@@ -11,8 +11,8 @@ To get list of options, use `-h` flag:
     optional arguments:
       -h, --help            show this help message and exit
       -f FILE, --file FILE  path to file
-      -m MODE, --mode MODE  rules of editing channels (see README for more info).
-                            Random if blank.
+      -m MODE, --mode MODE  rules of editing channels (see README for more info),
+                            random if blank.
       --hide                don't show output image
       -o OUTPUT, --output OUTPUT
                             path to the output
