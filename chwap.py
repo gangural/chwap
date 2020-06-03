@@ -8,7 +8,7 @@ alphabet = "rgb0fRGBI"
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-f", "--file", help="path to file", required=True)
-parser.add_argument("-m", "--mode", help="rules of editing channels (see README.md for more info)")
+parser.add_argument("-m", "--mode", help="rules of editing channels (see README.md for more info), random if blank.")
 parser.add_argument("--hide", action='store_true', help="don't show output image")
 parser.add_argument("-o", "--output", help="path to the output")
 args = parser.parse_args()
