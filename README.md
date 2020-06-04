@@ -35,7 +35,7 @@ First symbol is responsible for red channel, second is green, third is blue.
 `fR0` - fill red channel, invert red and make it green, clear blue channel.
 
 ## Examples:
-Let's use this image as example:
+Let's use this image as an example:
 
 ![A gouldian finch](https://i.imgur.com/fY6YEIj.jpg)
 
