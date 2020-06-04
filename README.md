@@ -18,6 +18,7 @@ To get list of options, use `-h` flag:
                             path to the output
 
 **How to choose `--mode`?** Read this set of rules:
+
 - `r` - red channel from image, `g` is green, `b` is blue;
 - `R` - red channel from image, but inverted, `G` is inverted green, `B` is inverted blue;
 - `0` - fill a channel with 00 (full channel erase);

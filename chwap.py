@@ -1,5 +1,4 @@
 from PIL import Image
-import random
 from os.path import basename
 from sys import exit
 import argparse
@@ -28,6 +27,7 @@ if not args.output and args.hide:  # nothing selected
 if mode == 'I':
 	mode = 'RGB'
 if not mode:  # generate random rules
+	import random
 	mode = "".join((random.choice(alphabet[:8]) for i in range(3)))
 	print("Mode: "+mode)
 rules = list(mode)
@@ -38,11 +38,9 @@ pixarr = img.load()
 
 for x in range(img.size[0]):
 	for y in range(img.size[1]):
-		p = list(pixarr[x, y])[:3]
-		mods = p + [0, 255, 255 - p[0], 255 - p[1], 255 - p[2]]  # map pixel values to alphabet
-		for i in range(3):
-			p[i] = mods[rules[i]]  # set pixel RGB as defined at rules
-		pixarr[x, y] = tuple(p)
+		p = pixarr[x, y][:3]  # strip alpha value
+		mods = p + (0, 255, 255 - p[0], 255 - p[1], 255 - p[2])  # map pixel values to alphabet
+		pixarr[x, y] = tuple(mods[rules[i]] for i in range(3))
 
 if args.output:
 	img.save(args.output)
