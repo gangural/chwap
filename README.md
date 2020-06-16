@@ -13,7 +13,7 @@ To get list of options, use `-h` flag:
       -f FILE, --file FILE  path to file
       -m MODE, --mode MODE  rules of editing channels (see README.md for more
                             info), random if blank
-      --hide                don't show output image
+      --hide                do not show output image
       -o OUTPUT, --output OUTPUT
                             path to the output
       --fullrand            if mode is random, use all possible combinations for
