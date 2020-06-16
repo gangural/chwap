@@ -6,16 +6,19 @@ This tool is designed to work with Python 3, so it has to be installed. Also, yo
 ## Usage
 To get list of options, use `-h` flag:
 
-    usage: chwap.py [-h] -f FILE [-m MODE] [--hide] [-o OUTPUT]
-    
+    usage: chwap.py [-h] -f FILE [-m MODE] [--hide] [-o OUTPUT] [--fullrand]
+
     optional arguments:
       -h, --help            show this help message and exit
       -f FILE, --file FILE  path to file
-      -m MODE, --mode MODE  rules of editing channels (see README for more info),
-                            random if blank.
+      -m MODE, --mode MODE  rules of editing channels (see README.md for more
+                            info), random if blank
       --hide                don't show output image
       -o OUTPUT, --output OUTPUT
                             path to the output
+      --fullrand            if mode is random, use all possible combinations for
+                            random mode
+
 
 **How to choose `--mode`?** Read this set of rules:
 
