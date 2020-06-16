@@ -10,6 +10,7 @@ parser.add_argument("-f", "--file", help="path to file", required=True)
 parser.add_argument("-m", "--mode", help="rules of editing channels (see README.md for more info), random if blank.")
 parser.add_argument("--hide", action='store_true', help="don't show output image")
 parser.add_argument("-o", "--output", help="path to the output")
+parser.add_argument("--fullrand", action='store_true', help="if mode is random, use all possible combinations for random mode")
 args = parser.parse_args()
 
 file = args.file
@@ -28,7 +29,10 @@ if mode == 'I':
 	mode = 'RGB'
 if not mode:  # generate random rules
 	import random
-	mode = "".join((random.choice(alphabet[:8]) for i in range(3)))
+	if args.fullrand:
+		mode = "".join((random.choice(alphabet[:8]) for i in range(3)))
+	else:
+		mode = ''.join(random.sample('rgbRGB', 3))
 	print("Mode: "+mode)
 rules = list(mode)
 for i, e in enumerate(rules):  # convert to numeric values
