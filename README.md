@@ -1,5 +1,4 @@
-
-# chwap
+# 🌈 chwap
 Swap and change RGB channels on image. Also, you can invert them with this tool.
 ## Installation
 This tool is designed to work with Python 3, so it has to be installed. Also, you need python3-pip to install requirements. First, clone this repository and `cd` to it: `git clone https://github.com/gangural/chwap; cd chwap`. Then install the requirements (run as superuser): `pip3 install -r requirements.txt`. That's all!
